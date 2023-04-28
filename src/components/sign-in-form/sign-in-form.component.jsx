@@ -29,8 +29,18 @@ const SignInForm = () => {
             console.log('response', response);
             setformField(defaultFromField)
         } catch (error) {
-            alert(error.message)
-            console.log('handleOnSubmit Sign In', error);
+            switch (error.code) {
+                case 'auth/wrong-password':
+                    alert('Sai mật khẩu!! Vui lòng kiểm tra lại.')
+                    break;
+                case 'auth/user-not-found':
+                    alert('Không tìm thấy thông tin tài khoản.')
+                    break;
+
+                default:
+                    alert(error.code)
+                    break;
+            }
         }
     }
     return (
@@ -59,7 +69,7 @@ const SignInForm = () => {
                     <Button
                         onClick={signInWithGoogle}
                         buttonType={'google'}
-                        type="submit">Google</Button>
+                        type="button">Google</Button>
                 </div>
             </form>
         </div>
