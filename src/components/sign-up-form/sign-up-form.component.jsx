@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils"
+import Button from "../button/button.component"
 import FormInput from "../form-input/form-input.component"
-
+import './sign-up.styles.scss'
 const defaultFromField = {
     displayName: '',
     email: '',
@@ -35,8 +36,9 @@ const SignUpForm = () => {
         }
     }
     return (
-        <div>
-            <h1>Đăng nhập với Email và mật khẩu</h1>
+        <div className="sign-up-container">
+            <h2>Tạo tài khoản mới</h2>
+            <span>Đăng nhập với Email và mật khẩu</span>
             <form onSubmit={handleOnSubmit}>
                 <FormInput label={'Tên tài khoản'}
                     type={'text'}
@@ -70,7 +72,7 @@ const SignUpForm = () => {
                     value={confirmPassword}
                     onChange={handleChange} />
 
-                <button type="submit">Đăng ký</button>
+                <Button type="submit">Đăng ký</Button>
             </form>
         </div>
     )
