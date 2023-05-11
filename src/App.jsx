@@ -2,11 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import Authentication from './router/authentication/authentication.component';
 import Navigation from './router/navigation/navigation.component';
 import Home from './router/home/home.component';
+import Shop from './router/shop/shop.component';
 
 const App = () => {
-  const Shop = () => {
-    return (<h1>Shop</h1>)
-  }
   return (
     <Routes>
       <Route path='/' element={<Navigation />} >
