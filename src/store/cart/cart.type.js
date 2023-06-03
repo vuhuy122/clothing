@@ -1,0 +1,5 @@
+
+export const CART_ACTIONS_TYPES = {
+    SET_CART_ITEM: 'cart/SET_CART_ITEM',
+    SET_CART_DROPDOWN_OPEN: 'cart/SET_CART_DROPDOWN_OPEN',
+}
