@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     const dispatch = useDispatch()
 
     const cartItems = useSelector(SelectCartItems)
-    console.log('cartItems', cartItems);
+
     const addProductToCart = () => dispatch(addItemToCart(product, cartItems))
 
     return (
