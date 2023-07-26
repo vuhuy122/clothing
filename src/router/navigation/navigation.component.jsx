@@ -21,15 +21,15 @@ const Navigation = () => {
                 </LogoContainer>
                 <NavLinkContainer>
                     <NavLink to='/shop'>
-                        CỬA HÀNG
+                       CATEGORY
                     </NavLink>
                     {!currentUser ?
                         <NavLink to='/auth'>
-                            ĐĂNG NHẬP
+                            LOGIN
                         </NavLink>
                         :
                         <NavLink as='span' onClick={signOutUser}>
-                            ĐĂNG XUẤT
+                            LOGOUT
                         </NavLink>}
                     <CartIcon />
                 </NavLinkContainer>
