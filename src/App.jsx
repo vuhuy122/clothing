@@ -20,6 +20,29 @@ export const UserContext = createContext({
 const App = () => {
   const dispatch = useDispatch()
 
+  // useEffect(() => {
+  //   // Thực hiện đăng nhập bằng Google khi component được tạo
+  //   const authWindow = window.open('/login', '_blank');
+  //   authWindow.focus();
+  // }, []);
+
+// // server.js (ví dụ sử dụng Express)
+// const express = require('express');
+// const app = express();
+
+// // Xử lý yêu cầu đăng nhập
+// app.get('/login', (req, res) => {
+//   // Thực hiện đăng nhập Firebase ở đây
+//   // Ví dụ:
+//   // const result = await firebase.auth().signInWithPopup(googleProvider);
+//   // Sau khi đăng nhập thành công, đóng cửa sổ đăng nhập và trả kết quả về phía client
+//   res.send('<script>window.close()</script>');
+// });
+
+// app.listen(3000, () => {
+//   console.log('Server started on http://localhost:3000');
+// });
+
   useEffect(() => {
     dispatch(checkUserSession())
   }, [])
